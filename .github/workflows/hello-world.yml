@@ -1,8 +1,10 @@
-name: hello-world
-on: push
-jobs:
-  my-job:
-    runs-on: ubuntu-latest
-    steps:
+name: hello-world #nama workflows
+on: push #event push di repo
+jobs: 
+  my-job: #nama jobs
+    runs-on: ubuntu-latest #jalan di os ubuntu
+    steps: #langkah - langkah agar tujuan job tercapai
       - name: "First try"
         run: echo "Hello World!"
+      - name: "Find Out OS"
+        run: "lsb_release -a"
