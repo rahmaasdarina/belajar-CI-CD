@@ -5,13 +5,17 @@ jobs:
     runs-on: ubuntu-latest      #jalan di os ubuntu
     steps:                      #langkah - langkah agar tujuan job tercapai
       # - name: "Install Git"
-        # run: sudo apt install -y git
+      #   run: sudo apt install -y git
       # - name: "Clone Repository"
       #   run: git clone https://github.com/docker-library/hello-world.git
       - uses: actions/checkout@v2
+        with:
+        # Repository name with owner. For example, actions/checkout
+        # Default: ${{ github.repository }}
+        repository: 'docker-library/hello-world.git'
       - name: "List Directory"
         run: ls
-      - name: "Change Directory"
-        run: cd hello-world/amd64/hello-world
+      # - name: "Change Directory"
+      #   run: cd hello-world/amd64/hello-world
       - name: "Run app"
-        run: ./hello-world/amd64/hello-world/hello
+        run: ./amd64/hello-world/hello
