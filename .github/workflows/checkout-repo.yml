@@ -12,7 +12,7 @@ jobs:
         with:
         # Repository name with owner. For example, actions/checkout
         # Default: ${{ github.repository }}
-        repository: 'docker-library/hello-world'
+        repository: docker-library/hello-world
       - name: "List Directory"
         run: ls
       # - name: "Change Directory"
